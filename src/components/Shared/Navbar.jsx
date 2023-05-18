@@ -14,7 +14,7 @@ const Navbar = () => {
     const user = {};
 
     return (
-        <div className="navbar bg-purple-100 text-black flex justify-between items-center h-10">
+        <div className="navbar text-black flex justify-between items-center h-10">
             <Link to='/'>
                 <img src="https://i.ibb.co/hsMfBj2/1170130-ORVZE20-removebg-preview.png" alt="" className='w-16 h-16' />
                 <h1 className='text-3xl font-bold'>Playtime<span className='text-purple-600'>-Paradise</span></h1>
