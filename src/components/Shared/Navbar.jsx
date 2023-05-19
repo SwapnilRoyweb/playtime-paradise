@@ -25,7 +25,7 @@ const Navbar = () => {
                 </ul>
             </div>
             <div className="dropdown-end flex items-center">
-                {user ? <button className='btn btn-primary'>Login</button> : <div className="avatar">
+                {user ?<Link to='/login'><button className='btn btn-primary'>Login</button></Link> : <div className="avatar">
                     <div className="w-16 h-16 rounded-full">
                         <img src="https://i.ibb.co/frS7xwZ/1170130-ORVZE20.jpg" title='Name' />
                     </div>
