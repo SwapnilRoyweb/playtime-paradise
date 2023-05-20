@@ -1,8 +1,9 @@
+import { updateProfile } from 'firebase/auth';
 import React from 'react';
 import { useContext } from 'react';
 import { useState } from 'react';
 import { FaGoogle, FaGithubAlt, FaLinkedin } from 'react-icons/fa';
-import { Link } from 'react-router-dom';
+import { Link, useNavigate } from 'react-router-dom';
 import Swal from 'sweetalert2';
 import { AuthContext } from '../../Providers/AuthProvider';
 import './Register.css';
@@ -13,13 +14,15 @@ const Register = () => {
 
     const {createUser} = useContext(AuthContext);
 
+    const navigate = useNavigate();
+
     const handleRegister = event => {
         event.preventDefault();
 
         const form = event.target;
         const name = form.name.value;
         const email = form.email.value;
-        const photo = form.photo.value;
+        const photoURL = form.photo.value;
         const password = form.password.value;
         // console.log(name, email, photo, password);
 
@@ -32,6 +35,9 @@ const Register = () => {
                 'User Created Successfully!',
                 'success'
               )
+              updateInformation(user, name, photoURL);
+              navigate('/');
+              form.reset();
               setError('');
         })
         .catch(error => {
@@ -39,6 +45,13 @@ const Register = () => {
             setError(error.message);
         })
 
+    }
+    const updateInformation = (user, name, photoURL) => {
+        updateProfile(user, {
+            displayName: name, photoURL: photoURL
+        })
+        .then()
+        .catch(error => console.log(error))
     }
 
     return (
@@ -75,17 +88,9 @@ const Register = () => {
                                 </label>
                                 <input type="text" placeholder="password" name='password' className="input input-bordered text-white" />
                             </div>
-                            <p className='text-red-500 text-center'>{error}</p>
+                            <p className='text-red-600 text-center'>{error}</p>
                             <div className="form-control mt-5">
                                 <button className="btn btn-primary">Sign up</button>
-                                <div className='text-center mt-3'>
-                                    <p>or Sign up with </p>
-                                    <div className='flex gap-3 justify-center mt-3'>
-                                        <button className='btn btn-circle'><FaGoogle className='h-6 w-6 text-blue-500' /></button>
-                                        <button className='btn btn-circle'><FaGithubAlt className='h-6 w-6' /></button>
-                                        <button className='btn btn-circle'><FaLinkedin className='h-6 w-6 text-blue-600' /></button>
-                                    </div>
-                                </div>
                                 <p className='text-center mt-3 text-black'>Already have an Account? Please <Link to='/login' className='text-red-600'>Sign In</Link> </p>
                             </div>
                         </form>

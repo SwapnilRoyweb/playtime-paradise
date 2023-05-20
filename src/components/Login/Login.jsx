@@ -1,5 +1,5 @@
 import React, { useContext, useState } from 'react';
-import { Link } from 'react-router-dom';
+import { Link, useLocation, useNavigate } from 'react-router-dom';
 import './Login.css';
 import { FaGoogle, FaGithubAlt, FaLinkedin } from 'react-icons/fa';
 import { AuthContext } from '../../Providers/AuthProvider';
@@ -9,7 +9,12 @@ const Login = () => {
 
     const [error, setError] = useState('');
 
-    const {signIn} = useContext(AuthContext);
+    const { signIn, signInWithGoogle } = useContext(AuthContext);
+
+    const navigate = useNavigate();
+    const location = useLocation();
+
+    const from = location.state?.from?.pathname || '/'
 
     const handleLogin = event => {
         event.preventDefault();
@@ -20,15 +25,36 @@ const Login = () => {
         // console.log(email, password);
 
         signIn(email, password)
+            .then(result => {
+                const user = result.user;
+                console.log(user);
+                Swal.fire(
+                    'Good job!',
+                    'User Login Successfully!',
+                    'success'
+                )
+                navigate(from, {replace: true});
+                form.reset();
+                setError('');
+            })
+            .catch(error => {
+                console.log(error);
+                setError(error.message);
+            })
+    }
+
+    const handleGoogleSignIn = () => {
+        signInWithGoogle()
         .then(result => {
             const user = result.user;
-            console.log(user);
             Swal.fire(
                 'Good job!',
                 'User Login Successfully!',
                 'success'
-              )
-              setError('');
+            )
+            navigate(from, {replace: true});
+            setError('');
+            console.log(user);
         })
         .catch(error => {
             console.log(error);
@@ -67,7 +93,7 @@ const Login = () => {
                                 <div className='text-center mt-3'>
                                     <p>or Login with </p>
                                     <div className='flex gap-3 justify-center mt-3'>
-                                        <button className='btn btn-circle'><FaGoogle className='h-6 w-6 text-blue-500' /></button>
+                                        <button className='btn btn-circle' onClick={handleGoogleSignIn}><FaGoogle className='h-6 w-6 text-blue-500' /></button>
                                         <button className='btn btn-circle'><FaGithubAlt className='h-6 w-6' /></button>
                                         <button className='btn btn-circle'><FaLinkedin className='h-6 w-6 text-blue-600' /></button>
                                     </div>

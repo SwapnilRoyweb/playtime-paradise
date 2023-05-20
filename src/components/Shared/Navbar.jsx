@@ -10,7 +10,7 @@ const Navbar = () => {
         <li><Link to='/'>Home</Link></li>
         <li><Link>All Toys</Link></li>
         <li><Link>My Toys</Link></li>
-        <li><Link>Add A Toy</Link></li>
+        <li><Link to='/addToy'>Add A Toy</Link></li>
         <li><Link to='/blog'>Blog</Link></li>
     </>
 
@@ -20,7 +20,7 @@ const Navbar = () => {
         Logout()
         .then(result => {
             Swal.fire(
-                'Good job!',
+                'Logout!',
                 'User Logout Successfully!',
                 'success'
               )
@@ -40,12 +40,12 @@ const Navbar = () => {
                 </ul>
             </div>
             <div className="dropdown-end flex items-center">
-                {user ? <div className="avatar flex items-center">
-                    <div className="w-16 h-16 rounded-full">
-                        <img src="https://i.ibb.co/frS7xwZ/1170130-ORVZE20.jpg" title='Name' />
+                {user ? <div className="avatar flex items-center gap-3">
+                    <div className="w-14 h-14 rounded-full">
+                        <img src={user.photoURL} title={user.displayName} />
                     </div>
                     <button className='btn btn-primary' onClick={handleLogout}>Logout</button>
-                </div> : <Link><button className='btn btn-primary'>Login</button></Link>}
+                </div> : <Link to='/login'><button className='btn btn-primary'>Login</button></Link>}
                 <div className="dropdown">
                     <label tabIndex={0} className="btn btn-ghost btn-circle">
                         <svg xmlns="http://www.w3.org/2000/svg" className="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M4 6h16M4 12h16M4 18h7" /></svg>
