@@ -6,7 +6,7 @@ const Loader = () => {
     const navigation = useNavigation();
 
     if (navigation.state === 'loading') {
-        return <div className="radial-progress items-center">100%</div>
+        return <div className='flex items-center justify-center'><progress className="progress w-56"></progress></div>
     }
 };
 
