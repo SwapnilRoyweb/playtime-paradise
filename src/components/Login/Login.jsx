@@ -1,9 +1,41 @@
-import React from 'react';
+import React, { useContext, useState } from 'react';
 import { Link } from 'react-router-dom';
 import './Login.css';
 import { FaGoogle, FaGithubAlt, FaLinkedin } from 'react-icons/fa';
+import { AuthContext } from '../../Providers/AuthProvider';
+import Swal from 'sweetalert2';
 
 const Login = () => {
+
+    const [error, setError] = useState('');
+
+    const {signIn} = useContext(AuthContext);
+
+    const handleLogin = event => {
+        event.preventDefault();
+
+        const form = event.target;
+        const email = form.email.value;
+        const password = form.password.value;
+        // console.log(email, password);
+
+        signIn(email, password)
+        .then(result => {
+            const user = result.user;
+            console.log(user);
+            Swal.fire(
+                'Good job!',
+                'User Login Successfully!',
+                'success'
+              )
+              setError('');
+        })
+        .catch(error => {
+            console.log(error);
+            setError(error.message);
+        })
+    }
+
     return (
         <div className="mx-10 my-10 bg-purple-100 rounded-3xl p-5 login-bg">
             <div className="hero-content flex-col justify-evenly items-center lg:flex-row">
@@ -12,7 +44,7 @@ const Login = () => {
                 </div>
                 <div className="card flex-shrink-0 w-full max-w-sm shadow-3xl bg-purple-300">
                     <div className="card-body">
-                        <form>
+                        <form onSubmit={handleLogin}>
                             <h1 className="text-5xl font-bold text-black text-center mb-5">Login now!</h1>
                             <div className="form-control">
                                 <label className="label">
@@ -29,6 +61,7 @@ const Login = () => {
                                     <a href="#" className="label-text-alt link link-hover text-black">Forgot password?</a>
                                 </label>
                             </div>
+                            <p className='text-center text-red-600'>{error}</p>
                             <div className="form-control mt-3">
                                 <button className="btn btn-primary">Login</button>
                                 <div className='text-center mt-3'>
