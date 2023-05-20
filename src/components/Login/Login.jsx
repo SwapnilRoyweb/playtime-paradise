@@ -18,13 +18,13 @@ const Login = () => {
                                 <label className="label">
                                     <span className="label-text text-black">Email</span>
                                 </label>
-                                <input type="text" placeholder="email" className="input input-bordered text-white" />
+                                <input type="text" placeholder="email" name='email' className="input input-bordered text-white" />
                             </div>
                             <div className="form-control">
                                 <label className="label">
                                     <span className="label-text text-black">Password</span>
                                 </label>
-                                <input type="text" placeholder="password" className="input input-bordered text-white" />
+                                <input type="text" placeholder="password" name='password' className="input input-bordered text-white" />
                                 <label className="label">
                                     <a href="#" className="label-text-alt link link-hover text-black">Forgot password?</a>
                                 </label>
@@ -34,9 +34,9 @@ const Login = () => {
                                 <div className='text-center mt-3'>
                                     <p>or Login with </p>
                                     <div className='flex gap-3 justify-center mt-3'>
-                                        <button className='btn btn-circle btn-warning'><FaGoogle /></button>
-                                        <button className='btn btn-circle btn-warning'><FaGithubAlt /></button>
-                                        <button className='btn btn-circle btn-warning'><FaLinkedin /></button>
+                                        <button className='btn btn-circle'><FaGoogle className='h-6 w-6 text-blue-500' /></button>
+                                        <button className='btn btn-circle'><FaGithubAlt className='h-6 w-6' /></button>
+                                        <button className='btn btn-circle'><FaLinkedin className='h-6 w-6 text-blue-600' /></button>
                                     </div>
                                 </div>
                                 <p className='text-center mt-3 text-black'>Not have an Account? Please <Link to='/register' className='text-red-600'>Sign Up</Link> </p>
