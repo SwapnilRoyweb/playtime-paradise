@@ -18,6 +18,7 @@ import AllToys from './components/AllToys/AllToys.jsx';
 import SingleToy from './components/SingleToy/SingleToy.jsx';
 import Mytoys from './components/MyToys/Mytoys.jsx';
 import UpdateToy from './components/UpdateToy/UpdateToy.jsx';
+import ErrorPage from './components/ErrorPage/ErrorPage.jsx';
 
 const router = createBrowserRouter([
   {
@@ -63,6 +64,10 @@ const router = createBrowserRouter([
         element: <Blog></Blog>
       }
     ]
+  },
+  {
+    path: '*',
+    element: <ErrorPage></ErrorPage>
   }
 ])
 
