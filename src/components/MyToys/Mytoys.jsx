@@ -13,7 +13,7 @@ const Mytoys = () => {
     const [myToys, setMyToys] = useState([]);
 
     useEffect(() => {
-        fetch(`http://localhost:3000/myToys?sellerEmail=${user?.email}`)
+        fetch(`http://playtime-paradise-server-six.vercel.app/myToys?sellerEmail=${user?.email}`)
             .then(res => res.json())
             .then(data => setMyToys(data))
     }, [user])

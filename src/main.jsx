@@ -52,12 +52,12 @@ const router = createBrowserRouter([
       {
         path: 'updateToy/:id',
         element: <UpdateToy></UpdateToy>,
-        loader: ({params}) => fetch(`http://localhost:3000/toys/${params.id}`)
+        loader: ({params}) => fetch(`http://playtime-paradise-server-six.vercel.app/toys/${params.id}`)
       },
       {
         path: 'singleToy/:id',
         element: <PrivateRoute><SingleToy></SingleToy></PrivateRoute>,
-        loader: ({params}) => fetch(`http://localhost:3000/toys/${params.id}`)
+        loader: ({params}) => fetch(`http://playtime-paradise-server-six.vercel.app/toys/${params.id}`)
       },
       {
         path: 'blog',
