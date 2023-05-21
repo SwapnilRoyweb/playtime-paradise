@@ -26,6 +26,7 @@ const CategoryToys = () => {
 
     return (
         <div className='bg-purple-100 m-20 p-5'>
+            <h1 className='text-5xl font-bold text-center bg-purple-300 p-3 rounded-full'>Shop By Category</h1>
             <Tabs className='m-10'>
                 <TabList className='flex justify-center'>
                     <Tab>Monkey</Tab>
@@ -35,17 +36,17 @@ const CategoryToys = () => {
 
 
                 <TabPanel>
-                    <div className='flex mt-5 gap-5 items-center justify-center'>
+                    <div className='flex flex-col md:flex-row mt-5 gap-5 items-center justify-center'>
                         {monkeyToys.map(monkeyToy => <MonkeyToys key={monkeyToy._id} monkeyToy={monkeyToy}></MonkeyToys>)}
                     </div>
                 </TabPanel>
                 <TabPanel>
-                    <div className='flex mt-5 gap-5 items-center justify-center'>
+                    <div className='flex flex-col md:flex-row mt-5 gap-5 items-center justify-center'>
                         {dinosaurToys.map(dinosaurToy => <DinosaurToys key={dinosaurToy._id} dinosaurToy={dinosaurToy}></DinosaurToys>)}
                     </div>
                 </TabPanel>
                 <TabPanel>
-                    <div className='flex mt-5 gap-5 items-center justify-center'>
+                    <div className='flex flex-col md:flex-row mt-5 gap-5 items-center justify-center'>
                         {bearToys.map(bearToy => <BearToys key={bearToy._id} bearToy={bearToy}></BearToys>)}
                     </div>
                 </TabPanel>

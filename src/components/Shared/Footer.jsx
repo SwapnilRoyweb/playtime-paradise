@@ -3,7 +3,7 @@ import { FaFacebookF, FaWhatsapp, FaTwitter } from 'react-icons/fa';
 
 const Footer = () => {
     return (
-        <footer className="footer items-center p-3 bg-purple-100 text-black rounded-xl">
+        <footer className="footer items-center p-3 bg-purple-100 text-black rounded-xl fixed bottom-0">
             <div className="flex items-center">
                 <img src="https://i.ibb.co/hsMfBj2/1170130-ORVZE20-removebg-preview.png" alt="" className='w-20 h-20' />
                 <h1 className='text-3xl font-bold'>Playtime<span className='text-purple-600'>-Paradise</span></h1>
