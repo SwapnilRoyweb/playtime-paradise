@@ -3,6 +3,7 @@ import { Outlet } from 'react-router-dom';
 import Footer from '../Shared/Footer';
 import Loader from '../Shared/Loader/Loader';
 import Navbar from '../Shared/Navbar';
+import '@smastrom/react-rating/style.css';
 
 const Main = () => {
     return (
