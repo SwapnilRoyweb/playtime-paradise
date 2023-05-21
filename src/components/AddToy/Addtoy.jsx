@@ -47,6 +47,7 @@ const Addtoy = () => {
                     'Toy Added Successfully',
                     'success'
                 )
+                form.reset();
             }
         })
     }
