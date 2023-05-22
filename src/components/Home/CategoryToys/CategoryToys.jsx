@@ -42,7 +42,6 @@ const CategoryToys = () => {
                 <TabPanel>
                     <div className='flex flex-col md:flex-row mt-5 gap-5 items-center justify-center' data-aos="fade-down"
                         data-aos-offset="200"
-                        data-aos-delay="50"
                         data-aos-duration="1000"
                         data-aos-easing="ease-in-out"
                         data-aos-mirror="true"
@@ -54,7 +53,6 @@ const CategoryToys = () => {
                 <TabPanel>
                     <div className='flex flex-col md:flex-row mt-5 gap-5 items-center justify-center' data-aos="fade-down"
                         data-aos-offset="200"
-                        data-aos-delay="50"
                         data-aos-duration="1000"
                         data-aos-easing="ease-in-out"
                         data-aos-mirror="true"
@@ -65,8 +63,7 @@ const CategoryToys = () => {
                 </TabPanel>
                 <TabPanel>
                     <div className='flex flex-col md:flex-row mt-5 gap-5 items-center justify-center' data-aos="fade-down"
-                        data-aos-offset="200"
-                        data-aos-delay="50"
+                        data-aos-offset="200"               
                         data-aos-duration="1000"
                         data-aos-easing="ease-in-out"
                         data-aos-mirror="true"
