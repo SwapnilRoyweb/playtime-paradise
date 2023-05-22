@@ -7,6 +7,10 @@ import 'react-tabs/style/react-tabs.css';
 import BearToys from './BearToys/BearToys';
 import DinosaurToys from './DinosaurToys/DinosaurToys';
 import MonkeyToys from './MonkeyToys/MonkeyToys';
+import AOS from 'aos';
+import 'aos/dist/aos.css';
+
+AOS.init();
 
 const CategoryToys = () => {
 
@@ -36,17 +40,38 @@ const CategoryToys = () => {
 
 
                 <TabPanel>
-                    <div className='flex flex-col md:flex-row mt-5 gap-5 items-center justify-center'>
+                    <div className='flex flex-col md:flex-row mt-5 gap-5 items-center justify-center' data-aos="fade-down"
+                        data-aos-offset="200"
+                        data-aos-delay="50"
+                        data-aos-duration="1000"
+                        data-aos-easing="ease-in-out"
+                        data-aos-mirror="true"
+                        data-aos-once="false"
+                        data-aos-anchor-placement="top-center">
                         {monkeyToys.map(monkeyToy => <MonkeyToys key={monkeyToy._id} monkeyToy={monkeyToy}></MonkeyToys>)}
                     </div>
                 </TabPanel>
                 <TabPanel>
-                    <div className='flex flex-col md:flex-row mt-5 gap-5 items-center justify-center'>
+                    <div className='flex flex-col md:flex-row mt-5 gap-5 items-center justify-center' data-aos="fade-down"
+                        data-aos-offset="200"
+                        data-aos-delay="50"
+                        data-aos-duration="1000"
+                        data-aos-easing="ease-in-out"
+                        data-aos-mirror="true"
+                        data-aos-once="false"
+                        data-aos-anchor-placement="top-center">
                         {dinosaurToys.map(dinosaurToy => <DinosaurToys key={dinosaurToy._id} dinosaurToy={dinosaurToy}></DinosaurToys>)}
                     </div>
                 </TabPanel>
                 <TabPanel>
-                    <div className='flex flex-col md:flex-row mt-5 gap-5 items-center justify-center'>
+                    <div className='flex flex-col md:flex-row mt-5 gap-5 items-center justify-center' data-aos="fade-down"
+                        data-aos-offset="200"
+                        data-aos-delay="50"
+                        data-aos-duration="1000"
+                        data-aos-easing="ease-in-out"
+                        data-aos-mirror="true"
+                        data-aos-once="false"
+                        data-aos-anchor-placement="top-center">
                         {bearToys.map(bearToy => <BearToys key={bearToy._id} bearToy={bearToy}></BearToys>)}
                     </div>
                 </TabPanel>
