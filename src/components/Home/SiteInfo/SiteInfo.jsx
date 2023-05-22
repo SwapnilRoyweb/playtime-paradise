@@ -20,18 +20,6 @@ const SiteInfo = () => {
                     <div className="stat-value text-secondary">2.6M</div>
                     <div className="stat-desc text-black">21% more than last month</div>
                 </div>
-                <div className="stat">
-                    <div className="stat-figure text-secondary">
-                        <div className="avatar online">
-                            <div className="w-28 rounded-full">
-                                <img src="https://i.ibb.co/hsMfBj2/1170130-ORVZE20-removebg-preview.png" />
-                            </div>
-                        </div>
-                    </div>
-                    <div className="stat-value">86%</div>
-                    <div className="stat-title text-black">Tasks done</div>
-                    <div className="stat-desc text-secondary">31 tasks remaining</div>
-                </div>
             </div>
             <div className='flex items-center justify-center bg-purple-300 rounded-full px-5 border border-purple-800 shadow-2xl'>
                 <img src="https://i.ibb.co/hsMfBj2/1170130-ORVZE20-removebg-preview.png" alt="" className='rounded-full w-44' />

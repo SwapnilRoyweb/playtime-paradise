@@ -33,7 +33,7 @@ const CategoryToys = () => {
 
     return (
         <div className='bg-purple-100 m-20 p-5'>
-            <h1 className='text-5xl font-bold text-center bg-purple-300 p-3 rounded-full'>Shop By Category</h1>
+            <h1 className='text-2xl font-bold text-center bg-purple-300 p-3 rounded-full'>Shop By Category</h1>
             <Tabs className='m-10'>
                 <TabList className='flex justify-center'>
                     <Tab>Monkey</Tab>

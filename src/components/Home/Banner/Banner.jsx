@@ -9,11 +9,13 @@ const Banner = () => {
                 <div className=''>
                     <h1 className="text-5xl font-bold leading-tight">Find Your Best <br /> <span className='text-purple-600'>Toys</span> for your <br />Children!</h1>
                     <p className="py-6">We deliver best of fantastic, hand-piched, age appropriate toys <br /> books and puzzles, straight to your door.</p>
-                    <button className="btn btn-primary">Get Started <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={1.5} stroke="currentColor" className="w-6 h-6">
-                        <path strokeLinecap="round" strokeLinejoin="round" d="M8.25 4.5l7.5 7.5-7.5 7.5" />
-                    </svg>
-                    </button>
-                    <button className="btn btn-ghost btn-active ml-3">How to order</button>
+                    <div className='flex flex-col md:flex-row gap-5'>
+                        <button className="btn btn-primary">Get Started <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={1.5} stroke="currentColor" className="w-6 h-6">
+                            <path strokeLinecap="round" strokeLinejoin="round" d="M8.25 4.5l7.5 7.5-7.5 7.5" />
+                        </svg>
+                        </button>
+                        <button className="btn btn-ghost btn-active">How to order</button>
+                    </div>
                 </div>
             </div>
         </div>

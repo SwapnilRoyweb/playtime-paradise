@@ -11,7 +11,7 @@ const SubscribeBanner = () => {
                     <p className="py-6">We deliver best of fantastic, hand-piched age appropriate <br /> toys books and puzzles, straight to your door.</p>
                     <div className="form-control">
                         <div className="input-group">
-                            <input type="email" placeholder="Enter your Email" className="input input-bordered bg-white" />
+                            <input type="email" placeholder="Enter your Email" className="input input-bordered bg-white w-36 md:w-52" />
                             <button className="btn btn-primary">
                                 Subscribe
                             </button>
