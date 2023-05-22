@@ -5,7 +5,7 @@ const Footer = () => {
     return (
         <footer className="footer items-center p-3 bg-purple-100 text-black rounded-xl ">
             <div className="flex items-center">
-                <img src="https://i.ibb.co/hsMfBj2/1170130-ORVZE20-removebg-preview.png" alt="" className='w-20 h-20' />
+                <img src="https://i.ibb.co/n1rkRV9/windmill.png" alt="" className='w-20 h-20' />
                 <h1 className='text-3xl font-bold'>Playtime<span className='text-purple-600'>-Paradise</span></h1>
             </div>
                 <p>Copyright © 2023/ All rights reserved</p>
