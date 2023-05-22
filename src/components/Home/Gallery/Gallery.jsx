@@ -17,7 +17,7 @@ const Gallery = () => {
     return (
          <div className='my-10 mx-10 bg-purple-100 p-10 rounded-3xl'>
             <h1 className='text-center text-5xl font-bold bg-purple-300 rounded-full p-3'>Toy Gallery</h1>
-            <div className='grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 gap-10 my-5'>
+            <div className='grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 gap-10 my-5' data-aos="fade-zoom-in" data-aos-offset="200" data-aos-easing="ease-in-sine" data-aos-duration="600">
                 {
                     toys.map(toy => <GalleryDecoration key={toy._id} toy={toy}></GalleryDecoration>)
                 }
