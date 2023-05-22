@@ -7,7 +7,7 @@ const Gallery = () => {
     const [toys, setToys] = useState([]);
 
     useEffect(() => {
-        fetch('http://playtime-paradise-server-six.vercel.app/toys')
+        fetch('https://playtime-paradise-server-six.vercel.app/toys')
             .then(res => res.json())
             .then(data => setToys(data))
     }, [])

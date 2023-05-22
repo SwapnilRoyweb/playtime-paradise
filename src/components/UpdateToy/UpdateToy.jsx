@@ -38,7 +38,7 @@ const UpdateToy = () => {
             description: description
         }
 
-        fetch(`http://playtime-paradise-server-six.vercel.app/toys/${_id}`, {
+        fetch(`https://playtime-paradise-server-six.vercel.app/toys/${_id}`, {
             method: 'PUT',
             headers: {
                 'content-type' : 'application/json'

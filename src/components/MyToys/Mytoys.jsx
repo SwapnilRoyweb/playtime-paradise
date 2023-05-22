@@ -13,7 +13,7 @@ const Mytoys = () => {
     const [myToys, setMyToys] = useState([]);
 
     useEffect(() => {
-        fetch(`http://playtime-paradise-server-six.vercel.app/myToys?sellerEmail=${user?.email}`)
+        fetch(`https://playtime-paradise-server-six.vercel.app/myToys?sellerEmail=${user?.email}`)
             .then(res => res.json())
             .then(data => setMyToys(data))
     }, [user])
@@ -29,7 +29,7 @@ const Mytoys = () => {
             confirmButtonText: 'Yes, delete it!'
         }).then((result) => {
             if(result.isConfirmed){
-                fetch(`http://localhost:3000/toys/${id}`, {
+                fetch(`https://playtime-paradise-server-six.vercel.app/toys/${id}`, {
                     method: "DELETE"
                 })
                 .then(res => res.json())
