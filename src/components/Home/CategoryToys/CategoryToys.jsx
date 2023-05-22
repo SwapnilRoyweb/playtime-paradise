@@ -13,7 +13,7 @@ const CategoryToys = () => {
     const [toys, setToys] = useState([]);
 
     useEffect(() => {
-        fetch('https://playtime-paradise-server-six.vercel.app/toys')
+        fetch('https://playtime-paradise-new.vercel.app/toys')
             .then(res => res.json())
             .then(data => setToys(data))
     })

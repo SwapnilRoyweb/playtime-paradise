@@ -31,7 +31,7 @@ const Addtoy = () => {
             description: description
         }
         // console.log(toy);
-        fetch('https://playtime-paradise-server-six.vercel.app/toys',{
+        fetch('https://playtime-paradise-new.vercel.app/toys',{
             method: 'POST',
             headers: {
                 'content-type': 'application/json'
