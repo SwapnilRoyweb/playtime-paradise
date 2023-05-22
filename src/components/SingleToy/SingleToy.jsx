@@ -1,12 +1,15 @@
 import React from 'react';
 import { useLoaderData } from 'react-router-dom';
 import { Rating } from '@smastrom/react-rating';
+import useTitle from '../../hooks/useTitle';
 
 const SingleToy = () => {
 
     const toy = useLoaderData();
     // console.log(toy);
     const { sellerName, sellerEmail, subCategory, price, rating, quantity, description, toyPicture, toyName, _id } = toy;
+
+    useTitle(`${toyName}`)
 
     return (
         <div className='m-10'>

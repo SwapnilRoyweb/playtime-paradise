@@ -9,10 +9,13 @@ import DinosaurToys from './DinosaurToys/DinosaurToys';
 import MonkeyToys from './MonkeyToys/MonkeyToys';
 import AOS from 'aos';
 import 'aos/dist/aos.css';
+import useTitle from '../../../hooks/useTitle';
 
 AOS.init();
 
 const CategoryToys = () => {
+
+    useTitle('Home');
 
     const [toys, setToys] = useState([]);
 

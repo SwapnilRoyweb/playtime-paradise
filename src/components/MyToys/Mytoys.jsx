@@ -3,10 +3,13 @@ import { useContext } from 'react';
 import { useEffect } from 'react';
 import { useState } from 'react';
 import Swal from 'sweetalert2';
+import useTitle from '../../hooks/useTitle';
 import { AuthContext } from '../../Providers/AuthProvider';
 import MyToysRow from './MyToysRow';
 
 const Mytoys = () => {
+
+    useTitle('My Toys')
 
     const { user } = useContext(AuthContext);
 

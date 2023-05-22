@@ -5,10 +5,13 @@ import { useState } from 'react';
 import { FaGoogle, FaGithubAlt, FaLinkedin } from 'react-icons/fa';
 import { Link, useNavigate } from 'react-router-dom';
 import Swal from 'sweetalert2';
+import useTitle from '../../hooks/useTitle';
 import { AuthContext } from '../../Providers/AuthProvider';
 import './Register.css';
 
 const Register = () => {
+
+    useTitle('Sign Up')
 
     const [error, setError] = useState('');
 
